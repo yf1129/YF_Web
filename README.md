@@ -1,5 +1,5 @@
 # YF_Web
-基于Laravel框架的媛飞工作室
+基于Laravel5.5框架的媛飞工作室
 
 环境配置:
 Window 2010
