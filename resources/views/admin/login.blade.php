@@ -14,7 +14,7 @@
 <body>
 
 <div id="particles-js">
-{{--    {!!  !!}--}}
+    {!! Form::open !!}
     <div class="login">
         <div class="login-top">登录</div>
         <div class="login-center clearfix">
