@@ -4510,7 +4510,7 @@ __webpack_require__.r(__webpack_exports__);
     for (var i = 0, len = elements.length; i < len; i++) {
       var _ret = _loop(i, len);
 
-      if (_ret === "continue") continue;
+      if (_ret === "continue")
     }
 
     return createdDocument.body.innerHTML;
@@ -6240,7 +6240,7 @@ __webpack_require__.r(__webpack_exports__);
 // Object.prototype.constructor. Remove this eventually
 module.exports = function (obj) {
   return obj != null && (isBuffer(obj) || isSlowBuffer(obj) || !!obj._isBuffer)
-}
+};
 
 function isBuffer (obj) {
   return !!obj.constructor && typeof obj.constructor.isBuffer === 'function' && obj.constructor.isBuffer(obj)
@@ -9090,8 +9090,8 @@ function nodeName( elem, name ) {
 
   return elem.nodeName && elem.nodeName.toLowerCase() === name.toLowerCase();
 
-};
-var rsingleTag = ( /^<([a-z][^\/\0>:\x20\t\r\n\f]*)[\x20\t\r\n\f]*\/?>(?:<\/\1>|)$/i );
+}
+    var rsingleTag = ( /^<([a-z][^\/\0>:\x20\t\r\n\f]*)[\x20\t\r\n\f]*\/?>(?:<\/\1>|)$/i );
 
 
 
@@ -16871,17 +16871,9 @@ return jQuery;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
- * @license
- * Lodash <https://lodash.com/>
- * Copyright JS Foundation and other contributors <https://js.foundation/>
- * Released under MIT license <https://lodash.com/license>
- * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
- * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
- */
-;(function() {
-
-  /** Used as a safe reference for `undefined` in pre-ES5 environments. */
+/* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;
+            (function () {
+                /** Used as a safe reference for `undefined` in pre-ES5 environments. */
   var undefined;
 
   /** Used as the semantic version number. */
@@ -36636,7 +36628,7 @@ function defaultClearTimeout () {
     } catch (e) {
         cachedClearTimeout = defaultClearTimeout;
     }
-} ())
+} ());
 function runTimeout(fun) {
     if (cachedSetTimeout === setTimeout) {
         //normal enviroments in sane situations
@@ -36773,7 +36765,7 @@ process.emit = noop;
 process.prependListener = noop;
 process.prependOnceListener = noop;
 
-process.listeners = function (name) { return [] }
+process.listeners = function (name) { return [] };
 
 process.binding = function (name) {
     throw new Error('process.binding is not supported');
@@ -37073,9 +37065,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
 var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
+  var _vm = this;
+  var _h = _vm.$createElement;
+  var _c = _vm._self._c || _h;
   return _c(
     "Tabs",
     [
@@ -37093,8 +37085,8 @@ var render = function() {
     ],
     1
   )
-}
-var staticRenderFns = []
+};
+var staticRenderFns = [];
 render._withStripped = true
 
 
@@ -37130,12 +37122,12 @@ function normalizeComponent (
   // Vue.extend constructor export interop
   var options = typeof scriptExports === 'function'
     ? scriptExports.options
-    : scriptExports
+    : scriptExports;
 
   // render functions
   if (render) {
-    options.render = render
-    options.staticRenderFns = staticRenderFns
+    options.render = render;
+    options.staticRenderFns = staticRenderFns;
     options._compiled = true
   }
 
@@ -37149,14 +37141,14 @@ function normalizeComponent (
     options._scopeId = 'data-v-' + scopeId
   }
 
-  var hook
+  var hook;
   if (moduleIdentifier) { // server build
     hook = function (context) {
       // 2.3 injection
       context =
         context || // cached call
         (this.$vnode && this.$vnode.ssrContext) || // stateful
-        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
+        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext); // functional
       // 2.2 with runInNewContext: true
       if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
         context = __VUE_SSR_CONTEXT__
@@ -37169,7 +37161,7 @@ function normalizeComponent (
       if (context && context._registeredComponents) {
         context._registeredComponents.add(moduleIdentifier)
       }
-    }
+    };
     // used by ssr in case component is cached and beforeCreate
     // never gets called
     options._ssrRegister = hook
@@ -37183,16 +37175,16 @@ function normalizeComponent (
     if (options.functional) {
       // for template-only hot-reload because in that case the render fn doesn't
       // go through the normalizer
-      options._injectStyles = hook
+      options._injectStyles = hook;
       // register for functioal component in vue file
-      var originalRender = options.render
+      var originalRender = options.render;
       options.render = function renderWithStyleInjection (h, context) {
-        hook.call(context)
+        hook.call(context);
         return originalRender(h, context)
       }
     } else {
       // inject component registration as beforeCreate hook
-      var existing = options.beforeCreate
+      var existing = options.beforeCreate;
       options.beforeCreate = existing
         ? [].concat(existing, hook)
         : [hook]
@@ -37351,18 +37343,18 @@ var View = {
 
     return h(component, data, children)
   }
-}
+};
 
 function resolveProps (route, config) {
   switch (typeof config) {
     case 'undefined':
-      return
+      return;
     case 'object':
-      return config
+      return config;
     case 'function':
-      return config(route)
+      return config(route);
     case 'boolean':
-      return config ? route.params : undefined
+      return config ? route.params : undefined;
     default:
       if (true) {
         warn(
@@ -37711,7 +37703,7 @@ var Link = {
 
     return h(this.tag, data, this.$slots.default)
   }
-}
+};
 
 function guardEvent (e) {
   // don't redirect with control keys
@@ -39696,13 +39688,13 @@ var VueRouter = function VueRouter (options) {
   switch (mode) {
     case 'history':
       this.history = new HTML5History(this, options.base);
-      break
+      break;
     case 'hash':
       this.history = new HashHistory(this, options.base, this.fallback);
-      break
+      break;
     case 'abstract':
       this.history = new AbstractHistory(this, options.base);
-      break
+      break;
     default:
       if (true) {
         assert(false, ("invalid mode: " + mode));
@@ -40785,7 +40777,7 @@ methodsToPatch.forEach(function (method) {
       case 'push':
       case 'unshift':
         inserted = args;
-        break
+        break;
       case 'splice':
         inserted = args.slice(2);
         break
@@ -46755,14 +46747,14 @@ function parseFilters (exp) {
       }
     } else {
       switch (c) {
-        case 0x22: inDouble = true; break         // "
-        case 0x27: inSingle = true; break         // '
-        case 0x60: inTemplateString = true; break // `
-        case 0x28: paren++; break                 // (
-        case 0x29: paren--; break                 // )
-        case 0x5B: square++; break                // [
-        case 0x5D: square--; break                // ]
-        case 0x7B: curly++; break                 // {
+        case 0x22: inDouble = true; break;         // "
+        case 0x27: inSingle = true; break;         // '
+        case 0x60: inTemplateString = true; break; // `
+        case 0x28: paren++; break;                 // (
+        case 0x29: paren--; break;                 // )
+        case 0x5B: square++; break;                // [
+        case 0x5D: square--; break;                // ]
+        case 0x7B: curly++; break;                 // {
         case 0x7D: curly--; break                 // }
       }
       if (c === 0x2f) { // /
@@ -52073,11 +52065,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   "bb962f12",
   null
   
-)
+);
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/components/Index.vue"
+component.options.__file = "resources/js/components/Index.vue";
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
